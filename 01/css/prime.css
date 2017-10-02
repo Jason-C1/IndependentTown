@@ -1,0 +1,14 @@
+.primetable{
+	margin: 0 auto;
+	text-align: center;
+	background: #58f;
+	height: 380px;
+}
+.ftd{
+	background: #88ff88;
+	min-width: 30px;
+}
+.ttd{
+	background: #FF8888;
+	min-width: 30px;
+}
