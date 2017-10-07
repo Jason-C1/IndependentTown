@@ -1,43 +1,35 @@
-html,
 body{
-	height: 100%;
-	width: 100%;
+	background: #e6e6e6;
 }
-body{
-	background: #e0ddee;
+.wrapper{
+	width: 100%;
+	margin: 0 auto;
+	height: 100%;
+	background: #bbd;
+	border-radius: 0px;
+	box-shadow: 0 2px 6px rgba(100, 100, 100, 0.5);
 }
 .side{
 	display: none;
-}
-
-.wrapper{
-	margin: 0 auto;
-	height: 100%;
-	width: 100%
-	padding:10px;
-}
-.side{
 	background: #bbd;
 	float: right;
 	border: 5px groove slateblue;
+	border-left:10px groove slateblue;
 	height: 100%;
+	padding-bottom: 50px;
 	width: 200px;
-}
-.stitle{
 	padding: 7px;
 }
-.sgame{
+.content{
+	float: left;
 	width: 100%;
+	padding-bottom: 50px;
+
 }
-.sintro{
-	padding: 7px;
-	text-indent: 30px;
+.side{
+	border-radius: 0px 10px 10px 0px;
 }
-.contain{
-	height: 100%;
-	background: #bbd;
-}
-.contain>hr{
+.content>hr{
 	height:10px;
 	width: 50%;
 	border-top:5px groove skyblue;
@@ -53,17 +45,26 @@ body{
 .footer{
 	padding: 10px;
 	text-align: center;
-	clear: both;
 }
 .text-right{
 	text-align: right;
 }
-
+.clear{
+	clear: both;
+}
 @media (min-width: 900px) {
 	.side{
 		display: block;
 	}
 	.wrapper{
+		border-radius: 10px;
 		width: 840px;
+	}
+	.content{
+		float: left;
+		width: 640px;
+	}
+	.title{
+		border-top-left-radius: 10px;
 	}
 }
