@@ -1,0 +1,76 @@
+body{
+	margin: 0 0;
+}
+
+#header{
+	padding: 30px 20px;
+	border-bottom: 1px solid #d3d3d3;
+}
+
+#header h1{
+	width: 960px;
+	margin: 0 auto;
+	font-size: 3em;
+	color: #0000ff;
+}
+
+#container{
+	width: 960px;
+	margin: 0 auto;
+}
+
+#side{
+	width: 160px;
+	float: right;
+	padding: 30px 20px;
+}
+
+#main{
+	width: 750px;
+	height: 550px;
+	float: right;
+	border-right: 1px solid #d3d3d3;
+	background-image:url(images/bg_canvas.png);
+	position: relative;
+	cursor: url(images/hammer.ico),auto;
+}
+#game-ending{
+	font-size: 100px;
+	color: #ff1a00;
+	padding-top: 200px;
+	text-align: center;
+	font-family: fantasy;
+}
+
+#footer{
+	clear: both;
+	text-align: center;
+	padding: 10px 0 30px;
+	font-size: 0.8em;
+	color: #616161;
+	border-top: 1px solid #d3d3d3;
+}
+#count{
+	width: 41px;
+	height: 30px;
+	position: absolute;
+	display: none;
+}
+.mouse{
+	width: 115px;
+	height: 105px;
+	position: absolute;
+	display: block;
+}
+.normal{
+	background-image:url(images/mouse_normal.png);
+}
+.over{
+	background-image:url(images/mouse_over.png);
+}
+.hit{
+	background-image:url(images/mouse_hit.png);
+}
+.hide{
+	display: none;
+}
