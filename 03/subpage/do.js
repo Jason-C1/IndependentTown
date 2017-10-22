@@ -5,7 +5,7 @@ var holes = [
 ];
 var game = {
   score:0,
-  time:10,
+  time:100,
   timer:setInterval(function(){
       if(game.time<=0){
         var main = document.getElementById("main");
