@@ -48,11 +48,14 @@
 			</div>
 		</div>
 	</div>
-	<div id="contain" class="container">
-		<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" id="main" src="animation/index.html"></iframe>
-	</div>
-</div>
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.min.js "></script>
+	<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" id="main" src="animation/index.html"></iframe>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js "></script>
+	<script type="text/javascript">
+		window.onresize = function SetWinHeight(){
+			var win = document.getElementById("main");
+			win.height = window.innerHeight-55;
+		}();
+	</script>
 </body>
 </html>
