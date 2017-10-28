@@ -1,2 +1,2 @@
-# [IndependentTown](http://blog.csdn.net/guodongxiaren) 
+# [IndependentTown](https://jason-c1.github.io/IndependentTown/) 
 My web programming homework
