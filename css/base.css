@@ -108,6 +108,10 @@ li>a{
 .side{
 	border-radius: 0px 10px 10px 0px;
 }
+.stitle{
+	font-weight: bold;
+	font-size: 20px;
+}
 .content>hr{
 	height:10px;
 	width: 50%;

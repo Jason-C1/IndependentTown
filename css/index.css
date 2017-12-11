@@ -5,16 +5,25 @@
 	margin: 6px;
 	padding: 10px;
 	line-height: 3;
-	text-align: center;
+	// text-align: center;
+}
+.item:hover{
+	background: #222;
 }
 .article-list img{
 	display: block;
 	max-width: 100%;
 	max-height: 100px;
 	border-radius: 3px;
-
 }
 .article-list .title{
+	display: block;
 	font-size: 30px;
 	font-weight: bold;
+	color:#000;
+}
+.article-list .title:hover{
+	text-decoration: none;
+	color:#337ab7;
+	
 }
