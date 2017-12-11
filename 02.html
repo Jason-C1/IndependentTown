@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>独立之乡-独立思考让生活更精彩</title>
+		<script type="text/javascript" src="js/index.js"></script>
+		<script type="text/javascript" src="js/02.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/02.css" />
+	</head>
+
+	<body>
+		<div class="navbar navbar-fixed-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">  
+			            <span class="icon-bar"></span>  
+			            <span class="icon-bar"></span>  
+			            <span class="icon-bar"></span>  
+			        </button>
+					<a href="index.html"><img class="navbar-brand" src="img/logo2.png" /></a>
+				</div>
+				<div class="collapse navbar-collapse navbar-right is-collapse">
+					<ul class="nav navbar-nav">
+						<li>
+							<a class="nav-line" href="index.html"><span class="glyphicon glyphicon-home"></span>&nbsp首页</a>
+						</li>
+						<li>
+							<a class="nav-line" href="01.html"><span class="glyphicon glyphicon-list"></span>&nbsp实验一</a>
+						</li>
+						<li>
+							<a class="nav-line active" href="02.html"><span class="glyphicon glyphicon-list"></span>&nbsp实验二</a>
+						</li>
+						<li>
+							<a class="nav-line" href="03.html"><span class="glyphicon glyphicon-list"></span>&nbsp实验三</a>
+						</li>
+						<li>
+							<a class="nav-line" href="04.html"><span class="glyphicon glyphicon-list"></span>&nbsp实验四</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="contain" class="container">
+			<div class="wrapper">
+				<div class="side">
+					<div class="stitle">【任务描述】</div>
+					<div class="sintro">
+						<dl>
+							<dt>1、根据附件材料，自学月工资、年终奖个人所得税计算规则。</dt>
+							<dt>2、在 .js文件中以JSON格式定义个人所得税对象。
+								<dd>
+									其中属性涉及三个层次：
+									<dd>1）、第一层次有两个元素。一个元素存储扣除数（现行的金额是3500）；一个元素是数组对象，存放个人所得税税率表各级税率。</dd>
+									<dd>2）、数组中的每个元素是税率对象。</dd>
+									<dd>3）、每个税率对象包含个人所得税税率表中某一级的各项参数。</dd>
+								</dd>
+								<dd>
+									至少实现的两个方法，第三个方法选做：
+									<dd>1）、月工资个人所得税计算。输入参数是月工资（不含五险一金）；返回值是应缴纳的个人所得税。</dd>
+									<dd>2）、年终奖个人所得税计算。输入参数是年终奖发放当月工资（不含五险一金）、年终奖；返回值是应缴纳的个人所得税。</dd>
+									<dd>3）、（选做）最佳发放方案建议——由于年终奖存在无效纳税区间，该方法用于计算月工资（不含五险一金）和年终奖的最佳发放方案。输入参数是每月工资平均值（不含五险一金）、年终奖；返回值是JSON格式的月工资和年终奖建议发放金额，形如 {"monthlySalary": 3000, "yearEndAwards": 18000}。</dd>
+								</dd>
+							</dt>
+							<dt>
+							3、在页面的 content区域调用 个人所得税对象的两所得税计算方法，分别输出以下月工资和年终奖的个人所得税。
+							<dd>1）、分别计算输出月工资（不含五险一金）为3500、7000、10000、15000、50000、80000、100000元时应纳个人所得税税额。</dd>
+							<dd>2）、年终奖的数值由随机生成，可以跟月工资有一定的相关性，比如是月工资的3-20倍。
+								<br>每行输出结果形如： 月工资 5100元，每月所得税为 55元；年终奖 24000元，一次性所得税为 2295元；全年所得税共计 2955元。</dd>
+							</dd>
+							<dd>3）、（选做）针对每组月工资和年终奖，计算并输出建议的最佳发放方案。</dd>
+						</dt>
+						</dl>
+					</div>
+				</div>
+				<div class="content">
+					<div class="title">个人所得税计算</div>
+					<hr align="right" />
+					<div class="mainContent">
+						<p>
+							<script>
+								printGZ(3500);
+							</script>
+						</p>
+						<p>
+							<script>
+								printGZ(7000);
+							</script>
+						</p>
+						<p>
+							<script>
+								printGZ(10000);
+							</script>
+						</p>
+						<p>
+							<script>
+								printGZ(15000);
+							</script>
+						</p>
+						<p>
+							<script>
+								printGZ(50000);
+							</script>
+						</p>
+						<p>
+							<script>
+								printGZ(80000);
+							</script>
+						</p>
+						<p>
+							<script>
+								printGZ(100000);
+							</script>
+						</p>
+
+					</div>
+					<hr align="right" />
+					<div class="apply">
+						<h2>实例应用</h2>
+						<div>
+							<label for="cmt">输入月工资:</label>
+							<input type="text" name="cmt" id="cmti" value="3500" />
+							<input type="button" name="cmt" id="cmtb" value="计算月工资" onclick="cmtOutput()" />
+						</div>
+						<div>
+							<label for="cyet">输入年终奖:</label>
+							<input type="text" name="cyet" id="cyeti" value="0" />
+							<input type="button" name="cyet" id="cyetb" value="计算月工资和年终奖" onclick="cyetOutput();cmtOutput()" />
+						</div>
+						<div>每月所得税：<span id="cmto">0</span> 元</div>
+						<div>年终奖所得税：<span id="cyeto">0</span> 元</div>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+
+			<div class="footer">独立之乡&copy;2017 Powered by Jason<br>
+				<a href="https://github.com/jason-c1/independenttown">github.com</a>
+			</div>
+		</div>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js "></script>
+	</body>
+
+</html>
